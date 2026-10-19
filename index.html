@@ -1,292 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KF Kamilly Flores Estética</title>
+    <title>KF Estética | Kamilly Flores</title>
     
-    <!-- Google Fonts -->
+    <!-- Importando fontes elegantes do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration & Custom CSS -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#FCFAF8',      // Soft beige
-                            text: '#4A3C31',    // Dark brown
-                            accent: '#C49A87',  // Rose gold / soft brown
-                            accentDark: '#A67C6A',
-                            card: '#FFFFFF',
-                            muted: '#8A796F'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(196, 154, 135, 0.15)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom Decorative Elements */
-        body {
-            background-color: #FCFAF8;
-            color: #4A3C31;
-        }
-        
-        .bg-leaf-pattern {
-            background-image: radial-gradient(#C49A87 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.1;
-        }
-
-        /* Subtle floating animation for decorative elements */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-            animation: float 6s ease-in-out 3s infinite;
-        }
-    </style>
+    <!-- Referência ao seu arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased text-brand-text relative overflow-x-hidden">
+<body>
 
-    <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-brand-accent/20 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex flex-col items-center">
-                <!-- Text Logo -->
-                <span class="font-serif text-3xl text-brand-text leading-none tracking-wider">KF</span>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-brand-accent mt-1">Estética</span>
-            </a>
-            
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex gap-8 items-center">
-                <a href="#inicio" class="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors">Início</a>
-                <a href="#servicos" class="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors">Serviços</a>
-                <a href="https://wa.me/5562998293701" target="_blank" class="px-5 py-2 border border-brand-accent text-brand-accent rounded-full text-sm uppercase tracking-widest hover:bg-brand-accent hover:text-white transition-all">Contato</a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl text-brand-text focus:outline-none" id="mobile-menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <!-- CABEÇALHO (Logotipo e Menu) -->
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>KF</h1>
+            <span>KAMILLY FLORES<br>ESTÉTICA</span>
         </div>
-
-        <!-- Mobile Nav Dropdown -->
-        <div class="md:hidden absolute top-full left-0 w-full bg-brand-bg border-b border-brand-accent/20 hidden flex-col items-center py-6 gap-6 shadow-lg" id="mobile-menu">
-            <a href="#inicio" class="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors mobile-link">Início</a>
-            <a href="#servicos" class="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors mobile-link">Serviços</a>
-            <a href="https://wa.me/5562998293701" target="_blank" class="px-5 py-2 bg-brand-accent text-white rounded-full text-sm uppercase tracking-widest mobile-link">Contato</a>
-        </div>
+        <nav class="menu">
+            <div class="menu-icon">&#9776;</div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <!-- Decorative Background Leaves (SVG shapes simulating the aesthetic) -->
-        <div class="absolute top-20 -left-10 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 -right-10 w-64 h-64 bg-[#E8D5CC]/40 rounded-full blur-3xl"></div>
-        
-        <svg class="absolute top-32 left-4 md:left-20 w-16 h-16 text-brand-accent/30 animate-float transform -rotate-45" fill="currentColor" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
-        <svg class="absolute bottom-40 right-4 md:right-24 w-20 h-20 text-brand-accent/20 animate-float-delayed transform rotate-45" fill="currentColor" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
-
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-brand-text">
-                Cuidando da sua <br>
-                <span class="italic text-brand-accent">melhor versão</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-brand-muted mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Cílios <span class="text-brand-accent mx-2">•</span> 
-                Limpeza de pele <span class="text-brand-accent mx-2">•</span> 
-                Microagulhamento <span class="text-brand-accent mx-2">•</span> 
-                Revitalização facial <span class="text-brand-accent mx-2">•</span> 
-                Cone hindu
-            </p>
-            
-            <a href="https://wa.me/5562998293701" target="_blank" class="inline-flex items-center gap-3 bg-brand-accent text-white px-8 py-4 rounded-full text-lg shadow-soft hover:bg-brand-accentDark hover:shadow-lg transition-all transform hover:-translate-y-1">
-                <span>Agende o seu autocuidado</span>
-                <i class="fa-brands fa-whatsapp text-xl"></i>
+    <!-- SEÇÃO HERO (Banner Principal) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="titulo-principal">Cuidando da sua<br>melhor versão</h1>
+            <p class="subtitulo">Cílios | Limpeza de pele | Microagulhamento<br>Revitalização facial | Cone hindu</p>
+            <a href="https://wa.me/5562998293701" target="_blank" class="btn-agendar-hero">
+                Agende o seu autocuidado <span class="icon-whatsapp">💬</span>
             </a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicos" class="py-24 px-6 bg-white relative">
-        <!-- Subtle Pattern -->
-        <div class="absolute inset-0 bg-leaf-pattern"></div>
-        
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl text-brand-text mb-4">Nossos Serviços</h2>
-                <div class="w-16 h-px bg-brand-accent mx-auto"></div>
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="container-sobre">
+            <div class="sobre-imagem">
+                <!-- Imagem da seção sobre -->
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kamilly Flores Estética">
+                <div class="detalhe-dourado"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <!-- Service Card 1 -->
-                <div class="bg-brand-bg rounded-[2rem] p-6 shadow-soft text-center group hover:-translate-y-2 transition-transform duration-300 border border-brand-accent/10">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm relative">
-                        <img src="https://placehold.co/400x400/E8D5CC/4A3C31?font=Montserrat&text=Cílios" alt="Cílios" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3 text-brand-text">Cílios</h3>
-                    <p class="text-brand-muted text-sm mb-6 px-2 line-clamp-3">Extensões perfeitas para realçar o seu olhar, trazendo volume e naturalidade com técnicas exclusivas.</p>
-                    <a href="https://wa.me/5562998293701?text=Olá,%20gostaria%20de%20agendar%20o%20serviço%20de%20Cílios!" target="_blank" class="inline-block border border-brand-accent text-brand-accent px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-accent hover:text-white transition-colors">
-                        Agendar
-                    </a>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div class="bg-brand-bg rounded-[2rem] p-6 shadow-soft text-center group hover:-translate-y-2 transition-transform duration-300 border border-brand-accent/10">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm relative">
-                        <img src="https://placehold.co/400x400/E8D5CC/4A3C31?font=Montserrat&text=Limpeza+de+Pele" alt="Limpeza de Pele" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3 text-brand-text">Limpeza de Pele</h3>
-                    <p class="text-brand-muted text-sm mb-6 px-2 line-clamp-3">Renovação celular profunda, remoção de impurezas e hidratação para uma pele radiante e saudável.</p>
-                    <a href="https://wa.me/5562998293701?text=Olá,%20gostaria%20de%20agendar%20uma%20Limpeza%20de%20Pele!" target="_blank" class="inline-block border border-brand-accent text-brand-accent px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-accent hover:text-white transition-colors">
-                        Agendar
-                    </a>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="bg-brand-bg rounded-[2rem] p-6 shadow-soft text-center group hover:-translate-y-2 transition-transform duration-300 border border-brand-accent/10">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm relative">
-                        <img src="https://placehold.co/400x400/E8D5CC/4A3C31?font=Montserrat&text=Microagulhamento" alt="Microagulhamento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3 text-brand-text">Microagulhamento</h3>
-                    <p class="text-brand-muted text-sm mb-6 px-2 line-clamp-3">Estímulo de colágeno para atenuar manchas, cicatrizes e linhas de expressão, rejuvenescendo o rosto.</p>
-                    <a href="https://wa.me/5562998293701?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Microagulhamento!" target="_blank" class="inline-block border border-brand-accent text-brand-accent px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-accent hover:text-white transition-colors">
-                        Agendar
-                    </a>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="bg-brand-bg rounded-[2rem] p-6 shadow-soft text-center group hover:-translate-y-2 transition-transform duration-300 border border-brand-accent/10 lg:col-start-2 lg:-ml-1/2">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm relative">
-                        <img src="https://placehold.co/400x400/E8D5CC/4A3C31?font=Montserrat&text=Revitalização" alt="Revitalização Facial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3 text-brand-text">Revitalização Facial</h3>
-                    <p class="text-brand-muted text-sm mb-6 px-2 line-clamp-3">Nutrição e luminosidade intensa, devolvendo o viço natural para a pele cansada ou sem brilho.</p>
-                    <a href="https://wa.me/5562998293701?text=Olá,%20quero%20agendar%20uma%20Revitalização%20Facial!" target="_blank" class="inline-block border border-brand-accent text-brand-accent px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-accent hover:text-white transition-colors">
-                        Agendar
-                    </a>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="bg-brand-bg rounded-[2rem] p-6 shadow-soft text-center group hover:-translate-y-2 transition-transform duration-300 border border-brand-accent/10">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm relative">
-                        <img src="https://placehold.co/400x400/E8D5CC/4A3C31?font=Montserrat&text=Cone+Hindu" alt="Cone Hindu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3 text-brand-text">Cone Hindu</h3>
-                    <p class="text-brand-muted text-sm mb-6 px-2 line-clamp-3">Terapia milenar para limpeza energética, alívio de tensões e desobstrução das vias respiratórias.</p>
-                    <a href="https://wa.me/5562998293701?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20Cone%20Hindu!" target="_blank" class="inline-block border border-brand-accent text-brand-accent px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-accent hover:text-white transition-colors">
-                        Agendar
-                    </a>
-                </div>
-
+            <div class="sobre-texto">
+                <h2 class="titulo-secao">Sobre Mim</h2>
+                <h3 class="subtitulo-sobre">Kamilly Flores</h3>
+                <p>
+                    Bem-vinda à KF Estética! Meu maior propósito é <strong>cuidar da sua melhor versão</strong>. 
+                    Sou apaixonada por realçar a beleza natural de cada mulher e proporcionar momentos únicos de relaxamento e renovação.
+                </p>
+                <p>
+                    Com dedicação e foco na estética facial e bem-estar, ofereço tratamentos personalizados, desde o olhar marcante com a extensão de cílios, até a saúde da sua pele com limpezas profundas, microagulhamento e terapias holísticas como o cone hindu.
+                </p>
+                <p>
+                    Aqui, cada detalhe do seu atendimento é pensado para elevar sua autoestima em um ambiente seguro, acolhedor e cheio de boas energias.
+                </p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-agendar">Quero agendar meu autocuidado</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gradient-to-b from-[#6A574D] to-[#4A3C31] text-brand-bg py-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
+    <!-- SEÇÃO SERVIÇOS -->
+    <section id="servicos" class="servicos">
+        <h2 class="titulo-servicos">Nossos Serviços</h2>
+        <div class="cards-container">
             
-            <a href="#" class="flex flex-col items-center mb-8">
-                <span class="font-serif text-4xl leading-none tracking-wider text-brand-bg">KF</span>
-                <span class="text-xs uppercase tracking-[0.3em] text-brand-accent mt-2">Estética</span>
-            </a>
-
-            <p class="font-serif italic text-xl mb-10 opacity-90">"Sua beleza e bem-estar em primeiro lugar"</p>
-
-            <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center mb-10">
-                <a href="https://wa.me/5562998293701" target="_blank" class="flex items-center gap-3 hover:text-brand-accent transition-colors">
-                    <div class="w-10 h-10 rounded-full border border-brand-accent/50 flex items-center justify-center">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                    </div>
-                    <span class="font-medium">+55 62 99829-3701</span>
-                </a>
-                
-                <a href="https://www.instagram.com/kf__estetica/" target="_blank" class="flex items-center gap-3 hover:text-brand-accent transition-colors">
-                    <div class="w-10 h-10 rounded-full border border-brand-accent/50 flex items-center justify-center">
-                        <i class="fa-brands fa-instagram text-xl"></i>
-                    </div>
-                    <span class="font-medium">@kf__estetica</span>
-                </a>
+            <div class="card">
+                <!-- Imagem FIXA: Extensão de Cílios com Pinça -->
+                <img src="https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Extensão de Cílios">
+                <h3>Cílios</h3>
+                <p>Cílios volumosos e naturais para realçar seu olhar.</p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-saber-mais">Saber mais</a>
             </div>
 
-            <div class="w-full h-px bg-white/10 mb-8"></div>
-            
-            <p class="text-sm opacity-60">
-                &copy; 2026 KF Kamilly Flores Estética. Todos os direitos reservados.
-            </p>
+            <div class="card">
+                <!-- Imagem FIXA: Limpeza de pele / Skincare facial -->
+                <img src="https://images.pexels.com/photos/30809944/pexels-photo-30809944.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Limpeza de Pele">
+                <h3>Limpeza de Pele</h3>
+                <p>Renovação, saúde e maciez para a pele do seu rosto.</p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-saber-mais">Saber mais</a>
+            </div>
+
+            <div class="card">
+                <!-- Imagem original do Microagulhamento mantida intacta -->
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Microagulhamento">
+                <h3>Microagulhamento</h3>
+                <p>Tratamento avançado para estímulo de colágeno e rejuvenescimento.</p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-saber-mais">Saber mais</a>
+            </div>
+
+            <div class="card">
+                <!-- Imagem FIXA: Massagem facial de revitalização -->
+                <img src="https://images.pexels.com/photos/6628807/pexels-photo-6628807.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Revitalização Facial">
+                <h3>Revitalização Facial</h3>
+                <p>Hidratação profunda, luminosidade e viço para sua pele.</p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-saber-mais">Saber mais</a>
+            </div>
+
+            <div class="card">
+                <!-- Imagem FIXA: Velas de Spa / Holístico para Cone Hindu -->
+                <img src="https://images.pexels.com/photos/3865712/pexels-photo-3865712.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Cone Hindu">
+                <h3>Cone Hindu</h3>
+                <p>Terapia holística para desobstrução, alívio e relaxamento.</p>
+                <a href="https://wa.me/5562998293701" target="_blank" class="btn-saber-mais">Saber mais</a>
+            </div>
+
         </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="contato-rodape">
+            <a href="https://wa.me/5562998293701" target="_blank">
+                <span class="icon">📞</span> +55 62 99829-3701
+            </a>
+            <a href="https://www.instagram.com/kf__estetica/" target="_blank">
+                <span class="icon">📷</span> @kf__estetica
+            </a>
+        </div>
+        <p>Sua beleza e bem-estar em primeiro lugar</p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const navbar = document.getElementById('navbar');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            
-            // Toggle icon between bars and xmark
-            const icon = menuBtn.querySelector('i');
-            if(mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                const icon = menuBtn.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            });
-        });
-
-        // Navbar shadow on scroll
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.replace('bg-brand-bg/90', 'bg-brand-bg/95');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.replace('bg-brand-bg/95', 'bg-brand-bg/90');
-            }
-        });
-    </script>
 </body>
 </html>
