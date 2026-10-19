@@ -1,0 +1,323 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E FONTES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF6F3;
+    color: #4A3C31;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #FAF6F3;
+}
+
+.logo {
+    text-align: center;
+    color: #B58A6A;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: #7A6352;
+}
+
+.menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #4A3C31;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (BANNER PRINCIPAL)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(to bottom, #FAF6F3, #F2E8DF);
+    padding: 60px 5% 80px;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    color: #4A3C31;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: #5A4E45;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-agendar-hero {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #B28268;
+    color: #FFF;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-agendar-hero:hover {
+    background-color: #92664E;
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE
+   ========================================================================== */
+.sobre {
+    padding: 80px 5%;
+    background-color: #FFFFFF;
+}
+
+.container-sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-imagem {
+    flex: 1;
+    position: relative;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+    max-height: 450px;
+    display: block;
+}
+
+.detalhe-dourado {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    color: #4A3C31;
+    margin-bottom: 5px;
+}
+
+.subtitulo-sobre {
+    font-size: 1.2rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #5A4E45;
+}
+
+.btn-agendar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #B28268;
+    border: 2px solid #B28268;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #B28268;
+    color: #FFF;
+}
+
+/* ==========================================================================
+   SEÇÃO SERVIÇOS
+   ========================================================================== */
+.servicos {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #FAF6F3;
+}
+
+.titulo-servicos {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #4A3C31;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #F2E8DF;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4A3C31;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #7A6352;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1; /* Empurra o botão para o fundo do cartão para ficarem alinhados */
+}
+
+/* Estilo atualizado e elegante para os botões */
+.btn-saber-mais {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: transparent;
+    color: #B28268;
+    border: 1px solid #B28268;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    width: 100%;
+}
+
+.btn-saber-mais:hover {
+    background-color: #B28268;
+    color: #FFF;
+}
+
+/* ==========================================================================
+   RODAPÉ 
+   ========================================================================== */
+.rodape {
+    background-color: #B28268;
+    color: #FFF;
+    text-align: center;
+    padding: 40px 5% 20px;
+}
+
+.contato-rodape {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.contato-rodape a {
+    color: #FFF;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rodape p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .titulo-principal { font-size: 2.5rem; }
+    
+    .container-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .detalhe-dourado {
+        top: -10px; left: -10px;
+    }
+    
+    .contato-rodape {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
